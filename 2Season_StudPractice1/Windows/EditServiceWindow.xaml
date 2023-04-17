@@ -1,0 +1,86 @@
+﻿<Window x:Class="_2Season_StudPractice1.Windows.EditServiceWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:_2Season_StudPractice1.Windows"
+        mc:Ignorable="d"
+        Title="EditServiceWindow" Height="550" Width="850"
+        Closing="Window_Closing">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="100"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="100"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="100"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="100"/>
+        </Grid.RowDefinitions>
+
+        <Image x:Name="LogoSearcher" Source="/Materials/school_logo.png" Grid.Column="0" Grid.Row="0"/>
+
+        <StackPanel Grid.Row="0" Grid.Column="1" HorizontalAlignment="Center" VerticalAlignment="Center">
+            <TextBlock x:Name="WindowContext" Text="Редактирование услуги" FontSize="30"/>
+        </StackPanel>
+
+        <StackPanel Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="2" 
+                    HorizontalAlignment="Center" VerticalAlignment="Center"
+                    Orientation="Horizontal">
+
+            <Button x:Name="ServiceImageBut" Margin="0, 0, 20, 0" Width="100" Height="100" Click="ServiceImageBut_Click">
+                <Image x:Name="TakedImage" Source="/Materials/school_logo.png"/>
+            </Button>
+
+            <StackPanel Orientation="Vertical">
+                <StackPanel x:Name="IdServicePanel" Orientation="Horizontal">
+                    <TextBlock Text="Id услуги: "/>
+                    <TextBox x:Name="ServiceIdBox" MinWidth="30" MaxWidth="100"/>
+                </StackPanel>
+
+                <StackPanel Orientation="Horizontal">
+                    <TextBlock Text="Название услуги: "/>
+                    <TextBox x:Name="ServiceTitleBox" MinWidth="30" MaxWidth="300" TextWrapping="Wrap" MinHeight="20" MaxHeight="60" SelectionChanged="ServiceTitleBox_SelectionChanged"/>
+                </StackPanel>
+
+                <StackPanel Orientation="Horizontal">
+                    <TextBlock Text="Стоимость услуги(руб): "/>
+                    <TextBox x:Name="ServiceCostBox" MinWidth="30" MaxWidth="100" SelectionChanged="ServiceCostBox_SelectionChanged"/>
+                </StackPanel>
+
+                <StackPanel Orientation="Horizontal">
+                    <StackPanel Orientation="Horizontal">
+                        <TextBlock Text="Длительность услуги(сек): "/>
+                        <TextBox x:Name="ServiceDurationBox" MinWidth="30" MaxWidth="100" TextChanged="ServiceDurationBox_TextChanged"/>
+                    </StackPanel>
+
+                    <StackPanel Orientation="Horizontal" Margin="10, 0, 0, 0">
+                        <TextBlock Text="Размер скидки(%): "/>
+                        <TextBox x:Name="ServiceDiscountBox" MinWidth="30" SelectionChanged="ServiceDiscountBox_SelectionChanged"/>
+                    </StackPanel>
+                </StackPanel>
+
+                <StackPanel Orientation="Horizontal">
+                    <TextBlock Text="Описание услуги: "/>
+                    <TextBox x:Name="ServiceDescriptionBox" MinWidth="200" MaxWidth="360" TextWrapping="Wrap" MinHeight="20" MaxHeight="80" SelectionChanged="ServiceDescriptionBox_SelectionChanged"/>
+                </StackPanel>
+
+            </StackPanel>
+        </StackPanel>
+
+        <StackPanel Grid.Row="3" Grid.Column="0" HorizontalAlignment="Center" VerticalAlignment="Center"
+                    Orientation="Horizontal" Grid.ColumnSpan="3">
+            <Button x:Name="SaveCardBut" Content="Сохранить изменения" Click="SaveCardBut_Click"/>
+            <Button x:Name="DeleteCardBut" Content="Удалить услугу" Click="DeleteCardBut_Click"/>
+            <Button x:Name="DeleteImageBut" Content="Убрать картинку" Click="DeleteImageBut_Click"/>
+            <Button x:Name="AdditionalBut" Content="Дополнительные изображения" Click="AdditionalBut_Click"></Button>
+        </StackPanel>
+
+        <StackPanel Grid.Row="0" Grid.Column="3" HorizontalAlignment="Center" VerticalAlignment="Center">
+            <Button x:Name="NewServiceBut" Height="80" Click="NewServiceBut_Click">
+                <TextBlock TextWrapping="Wrap" Text="Создать новую услугу"/>
+            </Button>
+        </StackPanel>
+    </Grid>
+</Window>

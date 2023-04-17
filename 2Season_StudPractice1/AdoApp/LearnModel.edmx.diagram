@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="c2adfb8351a849eeb427c020626e2dc9" Name="Diagram1" ZoomLevel="37">
+        <EntityTypeShape EntityType="SeasonStudPracticeModel.Client" Width="1.5" PointX="0.75" PointY="7" />
+        <EntityTypeShape EntityType="SeasonStudPracticeModel.ClientService" Width="1.5" PointX="3" PointY="9.125" />
+        <EntityTypeShape EntityType="SeasonStudPracticeModel.DocumentByService" Width="1.5" PointX="5.25" PointY="9.625" />
+        <EntityTypeShape EntityType="SeasonStudPracticeModel.Gender" Width="1.5" PointX="1.5" PointY="13" />
+        <EntityTypeShape EntityType="SeasonStudPracticeModel.Manufacturer" Width="1.5" PointX="0.75" PointY="2.625" />
+        <EntityTypeShape EntityType="SeasonStudPracticeModel.Product" Width="1.5" PointX="3" PointY="1.875" />
+        <EntityTypeShape EntityType="SeasonStudPracticeModel.ProductPhoto" Width="1.5" PointX="5.25" PointY="5.75" />
+        <EntityTypeShape EntityType="SeasonStudPracticeModel.ProductSale" Width="1.5" PointX="5.25" PointY="2.375" />
+        <EntityTypeShape EntityType="SeasonStudPracticeModel.Service" Width="1.5" PointX="0.75" PointY="16.25" />
+        <EntityTypeShape EntityType="SeasonStudPracticeModel.ServicePhoto" Width="1.5" PointX="3" PointY="18.75" />
+        <EntityTypeShape EntityType="SeasonStudPracticeModel.sysdiagrams" Width="1.5" PointX="7.75" PointY="0.75" />
+        <EntityTypeShape EntityType="SeasonStudPracticeModel.Tag" Width="1.5" PointX="3" PointY="15.875" />
+        <AssociationConnector Association="SeasonStudPracticeModel.FK_Client_Gender" />
+        <AssociationConnector Association="SeasonStudPracticeModel.FK_ClientService_Client" />
+        <AssociationConnector Association="SeasonStudPracticeModel.FK_ClientService_Service" />
+        <AssociationConnector Association="SeasonStudPracticeModel.FK_DocumentByService_ClientService" />
+        <AssociationConnector Association="SeasonStudPracticeModel.FK_ProductSale_ClientService" />
+        <AssociationConnector Association="SeasonStudPracticeModel.FK_Product_Manufacturer" />
+        <AssociationConnector Association="SeasonStudPracticeModel.FK_ProductPhoto_Product" />
+        <AssociationConnector Association="SeasonStudPracticeModel.FK_ProductSale_Product" />
+        <AssociationConnector Association="SeasonStudPracticeModel.FK_ServicePhoto_Service" />
+        <AssociationConnector Association="SeasonStudPracticeModel.AttachedProduct" />
+        <AssociationConnector Association="SeasonStudPracticeModel.TagOfClient" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>
